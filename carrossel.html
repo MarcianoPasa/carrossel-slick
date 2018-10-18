@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Carrossel</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="icons/icon.png" sizes="64x64">
+
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-migrate-1.4.1.min.js"></script>
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+		<!-- ou -->
+		<!-- <script type="text/javascript" src="libs/slick.js"></script> -->
+
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+		<!-- ou -->
+		<!-- <link rel="stylesheet" type="text/css" href="styles/slick.css"> -->
+
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+		<!-- ou -->
+		<!-- <link rel="stylesheet" type="text/css" href="styles/slick-theme.css"> -->
+	</head>
+
+	<body>
+		<div>
+			<h2>Exemplo de Carrossel criado com Slick</h2>
+
+			<div class="carousel">
+				<div><img src="images/C.png" alt="C"/></div>
+				<div><img src="images/C++.png" alt="C++"/></div>
+				<div><img src="images/CSharp.png" alt="C#"/></div>
+				<div><img src="images/DotNet.png" alt="DotNet"/></div>
+				<div><img src="images/Java.png" alt="Java"/></div>
+				<div><img src="images/JavaScript.png" alt="JavaScript"/></div>
+				<div><img src="images/Kotlin.png" alt="Kotlin"/></div>
+				<div><img src="images/PHP.png" alt="PHP"/></div>
+				<div><img src="images/Python.png" alt="Python"/></div>
+				<div><img src="images/R.png" alt="R"/></div>
+				<div><img src="images/Ruby.png" alt="Ruby"/></div>
+				<div><img src="images/Scala.png" alt="Scala"/></div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+		var largura = $(window).width();
+		var mostrarPontos = largura > 540;
+		var mostrarSetas = largura > 375;
+
+		$('.carousel').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			autoplay: true,
+			autoplaySpeed: 1000,
+			dots: mostrarPontos,
+			infinite: true,
+			centerMode: true,
+			arrows: mostrarSetas,
+			variableWidth: false,
+		});
+	</script>
+</html>
